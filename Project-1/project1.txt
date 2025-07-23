@@ -1,0 +1,517 @@
+#abdelrhrman abed - 1193191
+     
+     while true
+     do
+       echo "your choice "
+       echo "1. view  commands available  "
+       echo "2. create commands files for the avaliable commands"
+       echo "3. search avaliable commands files to display them"
+       echo "4. verification for the created files"
+       echo "5. Recommendation command "
+       echo "6. exit the program"
+       echo ""
+       echo "Please Enter number between 1-6"
+       echo ""
+     read sel
+     case $sel in
+                 1)
+                     echo ""
+                     echo "The menu of commands available"
+                     echo "cat"
+                     echo "cp"
+                     echo "grep"
+                     echo "ls"
+                     echo "mkdir"
+                     echo "mv"
+                     echo "nano"
+                     echo "pico"
+                     echo "sed"
+                     echo "touch"
+                     echo ""
+                 ;;
+                 
+   
+                 2)        
+                     echo "creation for command files done"
+                     echo "--------------------------------------------------------------------------------"
+                     #creation for cat command file
+                     man cat |  sed -n '9,13p' > cat.txt  
+                     echo "--------------------------------------------------------------------------------" >> cat.txt
+                     echo "The version for cat command: " >> cat.txt
+                     cat --version   >> cat.txt
+                     echo "--------------------------------------------------------------------------------" >> cat.txt
+                     echo "Example for cat command:" >> cat.txt
+                     echo "cat file.txt  The reuslt is Dispaly what is in the file assume in have abood.txt" >> cat.txt
+                     echo "and in abood.txt --> abdelrhman abed and use cat abood.txt the use touch create " >> cat.txt
+                     echo "using echo "abdlrhman" > abood.txt pass a and b to abood .txt and cat to "     >> cat.txt
+                     echo "display whats in the file" >> cat.txt
+                     echo "touch abood.txt; echo "abdelrhman" > abood.txt; cat abood.txt >> cat.txt; output" >> cat.txt
+                     touch abood.txt
+                     echo -e "a\nb" > abood.txt
+                     cat abood.txt >> cat.txt
+                     rm abood.txt
+                     echo "--------------------------------------------------------------------------------" >> cat.txt
+                     echo "Related Command for cat command:" >> cat.txt
+                     echo "more , less , grep " >> cat.txt
+                     echo "--------------------------------------------------------------------------------" >> cat.txt
+                     echo "Note for cat command:" >> cat.txt
+                     echo "cat's main use is file diplay ,it may also be used for text editing and change" >> cat.txt
+                     echo "tasks when linked with other commands trough pipes" >> cat.txt
+                     echo "--------------------------------------------------------------------------------" >> cat.txt
+           
+                      #creation for nano command file
+                      man nano | sed -n '11,17p' > nano.txt
+                      echo "--------------------------------------------------------------------------------" >> nano.txt
+                      echo "The Version for nano command:" >> nano.txt
+                      nano --version >> nano.txt
+                      echo "--------------------------------------------------------------------------------" >> nano.txt
+                      echo "Example for nano command:" >> nano.txt
+                      echo "nano file that creates any type of file 'txt , c ...'  " >> nano.txt
+                      echo "--------------------------------------------------------------------------------" >> nano.txt
+                      echo "Related Command for nano command:" >> nano.txt
+                      echo "pico" >> nano.txt
+                      echo "--------------------------------------------------------------------------------" >> nano.txt
+                      echo "Note for nano command:" >> nano.txt
+                      echo "is an ideal choice for short and simple text editing tasks because of its well"  >> nano.txt
+                      echo "known ease of use it provides standard test editor features like search , paste" >> nano.txt 
+                      echo "copy , and line number" >> nano.txt  
+                      echo "--------------------------------------------------------------------------------" >> nano.txt
+                      
+                      
+                      #creation for mv command file
+                      man mv | sed -n '11,17p' > mv.txt
+                      echo "--------------------------------------------------------------------------------" >> mv.txt
+                      echo "The Version for nano command:" >> mv.txt
+                      mv --version >> mv.txt
+                      echo "--------------------------------------------------------------------------------" >> mv.txt
+                      echo "Example for mv command:" >> mv.txt
+                      echo "mv file.txt file1 .txt or mv oldfile.txt new file.txt renames oldfile.txt to" >> mv.txt
+                      echo "newfile.txt using ls and grep 'f' to display what is in file The output: " >> mv.txt
+                      touch oldfile.txt
+                      ls | grep 'f' >> mv.txt
+                      echo "after using mv " >> mv.txt
+                      mv oldfile.txt newfile.txt
+                      rm newfile.txt
+                      ls | grep 'f' >> mv.txt 
+                      echo "--------------------------------------------------------------------------------" >> mv.txt
+                      echo "Related for mv command:" >> mv.txt
+                      echo "cp , rm" >> mv.txt
+                      echo "--------------------------------------------------------------------------------" >> mv.txt
+                      echo "Note for mv command:" >> mv.txt
+                      echo "command can be powerful tool for managing files and directories its moving or" >> mv.txt 
+                      echo "mv.txt renaming files  " >>  mv.txt 
+                      echo "--------------------------------------------------------------------------------" >> mv.txt
+                      
+                      #creation for ls command file
+                      man ls | sed -n '9,13p' > ls.txt
+                      echo "--------------------------------------------------------------------------------" >> ls.txt
+                      echo "The Version for ls command:" >> ls.txt
+                      ls --version >> ls.txt
+                      echo "--------------------------------------------------------------------------------" >> ls.txt
+                      echo "Example for ls command:" >> ls.txt
+                      echo "ls -l show all data for file ls Dsektop" >> ls.txt
+                      ls -l>> ls.txt
+                      echo "--------------------------------------------------------------------------------" >> ls.txt
+                      echo "Related for ls command:" >> ls.txt
+                      echo "cd/path/to/directory" >> ls.txt
+                      echo "--------------------------------------------------------------------------------" >> ls.txt
+                      echo "Note for ls command:" >> ls.txt
+                      echo "The ls command short for list it is uesd to list the contents od a directory" >> ls.txt
+                      echo "--------------------------------------------------------------------------------" >> ls.txt
+     
+                      #creation for touch command file
+                      man touch | sed -n '9,16p' > touch.txt
+                      echo "--------------------------------------------------------------------------------" >> touch.txt
+                      echo "The Version for touch command:" >> touch.txt
+                      touch --version >> touch.txt
+                      echo "--------------------------------------------------------------------------------" >> touch.txt
+                      echo "Example for touch command:" >> touch.txt
+                      echo "touch newfile.txt creates new empty file touch yes.txt  using ls and grep 'y' to" >> touch.txt
+                      echo "display what is in file the output :" >> touch.txt
+                      touch yes.txt
+                      ls | grep 'y' >> touch.txt
+                      rm yes.txt
+                      echo "--------------------------------------------------------------------------------">>touch.txt           
+                      echo "Related command for touch command:" >> touch.txt
+                      echo "mv oldfile.txt newfile.txt " >> touch.txt
+                      echo "--------------------------------------------------------------------------------" >> touch.txt
+                      echo "Note for touch command:" >> touch.txt
+                      echo "The touch command create empty file and creates a new empty file whit that name " >> touch.txt
+                      echo "--------------------------------------------------------------------------------" >> touch.txt
+            
+                      #creation for mkdir command file
+                      man mkdir | sed -n '9,12p' > mkdir.txt
+                      echo "--------------------------------------------------------------------------------" >> mkdir.txt
+                      echo "The Version for mkdir command:" >> mkdir.txt
+                      mkdir --version >> mkdir.txt
+                      echo "--------------------------------------------------------------------------------" >> mkdir.txt
+                      echo "Example for mkdir command:" >> mkdir.txt
+                      echo "mkdir newDirectory creates a new dirctort folder named newDirectory mkdir queue " >> mkdir.txt
+                      echo "using ls and grep 'q' to display what is in file The output:" >> mkdir.txt
+                      mkdir queue
+                      ls | grep 'q' >> mkdir.txt
+                      rmdir queue
+                      echo "--------------------------------------------------------------------------------" >> mkdir.txt
+                      echo "Related command for mkdir command:" >> mkdir.txt
+                      echo "no replacements for the current command " >> mkdir.txt
+                      echo "--------------------------------------------------------------------------------" >> mkdir.txt
+                      echo "Note for mkdir command: " >> mkdir.txt
+                      echo "The command , short for make directory is used to create new directories folder" >> mkdir.txt
+                      echo "--------------------------------------------------------------------------------" >> mkdir.txt
+            
+                      #creation for pico command file
+                      man pico | sed -n '11,17p' > pico.txt
+                      echo "--------------------------------------------------------------------------------" >> pico.txt
+                      echo "The Version for pico command:" >> pico.txt
+                      pico --version >> pico.txt
+                      echo "--------------------------------------------------------------------------------" >> pico.txt
+                      echo "Example for pico command:" >> pico.txt
+                      echo "pico newfile.txt test editor , creating or editing a file name is newfile,txt" >> pico.txt
+                      echo "--------------------------------------------------------------------------------" >> pico.txt
+                      echo "Related command for pico command:" >> pico.txt
+                      echo "nono" >> pico.txt
+                      echo "--------------------------------------------------------------------------------" >> pico.txt
+                      echo "Note for pico command:" >> pico.txt
+                      echo "The pico command is a valuable tool for basic text editing tasks useful for users" >> pico.txt
+                      echo "who prefer a straightforward and text editor" >> pico.txt
+                      echo "--------------------------------------------------------------------------------" >> pico.txt
+            
+                      #creation for cp command file
+                      man cp | sed -n '11,14p' > cp.txt > cp.txt
+                      echo "--------------------------------------------------------------------------------" >> cp.txt
+                      echo "The Version for cp command:" >> cp.txt
+                      cp --version >> cp.txt
+                      echo "--------------------------------------------------------------------------------" >> cp.txt
+                      echo "Example for cp command:" >> cp.txt
+                      echo "cp file.txt file1.txt copy data in file.txt to file1.txt in abood.txt "a and b"" >> cp.txt
+                      echo "cp abood.txt abood1.txt and using cat display abood1.txt The output :" >> cp.txt
+                      touch abood.txt
+                      echo -e "a\nb" > abood.txt
+                      cp abood.txt abood1.txt
+                      cat abood1.txt >> cp.txt
+                      rm abood.txt
+                      rm abood1.txt
+                      echo "--------------------------------------------------------------------------------" >> cp.txt
+                      echo "Related command for cp command:" >> cp.txt
+                      echo "mv can be move or rename move cute or paste" >> cp.txt
+                      echo "--------------------------------------------------------------------------------" >> cp.txt
+                      echo "Note for cp command:" >> cp.txt
+                      echo "The cp command is used for file duplication and copying it creates a new file" >> cp.txt
+                      echo "with the same content" >> cp.txt
+                      echo "--------------------------------------------------------------------------------" >> cp.txt
+            
+                      #creation for sed command file
+                      man sed | sed -n '9,14p' > sed.txt
+                      echo "--------------------------------------------------------------------------------" >> sed.txt
+                      echo "The Version for sed command:" >> sed.txt
+                      sed --version >> sed.txt
+                      echo "--------------------------------------------------------------------------------" >> sed.txt
+                      echo "Example for sed command:" >> sed.txt
+                      echo "sed -n 'numberline1,numberline2p' > output.txt it show just line between" >> sed.txt
+                      echo "numberline1 to numberline2 man sed | sed -n '1,2' > sed.txt The output:" >> sed.txt
+                      man sed | sed -n '1,2p' >> sed.txt
+                      echo "--------------------------------------------------------------------------------" >> sed.txt
+                      echo "Related command for sed command:" >> sed.txt
+                      echo "awk , grep , cut" >> sed.txt
+                      echo "--------------------------------------------------------------------------------" >> sed.txt
+                      echo "Note for sed command" >> sed.txt
+                      echo "stands for stream editor and is primarily used for text manipultion" >> sed.txt
+                      echo "--------------------------------------------------------------------------------" >> sed.txt
+            
+                      #creation for grep command file
+                      man grep | sed -n '11,20p' > grep.txt
+                      echo "--------------------------------------------------------------------------------" >> grep.txt
+                      echo "The Version  for grep command:" >> grep.txt
+                      grep --version >> grep.txt
+                      echo "--------------------------------------------------------------------------------" >>  grep.txt
+                      echo "Example for grep command:" >> grep.txt
+                      echo "grep './^...$'  example grep 'a' abood.txt using cat to display whats in file " >>  grep.txt
+                      echo "and in abood.txt a and b the grep just show aThe output :" >> grep.txt
+                      touch abood.txt
+                      echo -e "a\nb" > abood.txt
+                      grep 'a' abood.txt >> grep.txt
+                      rm abood.txt
+                      echo "--------------------------------------------------------------------------------" >>  grep.txt
+                      echo "Related for grep command:" >> grep.txt
+                      echo "sed" >>  grep.txt
+                      echo "--------------------------------------------------------------------------------" >>  grep.txt
+                      echo "Note for grep command:" >> grep.txt
+                      echo "The cd command using for searching and filtering text files " >>  grep.txt
+                      echo "--------------------------------------------------------------------------------" >>  grep.txt
+                 ;;    
+   
+                 3)
+                      while true; do
+                      echo "Enter the command name to search:"
+                      echo "enter 0 if you want back to meun" 
+
+                      read choice
+                      case $choice in
+                                      "cat") 
+                                             echo "----------------------------------------------------------------------------"
+                                             echo "Description for cat command: "
+                                             cat cat.txt
+                                      ;;
+  
+                                      "nano")  
+                                             echo "----------------------------------------------------------------------------"
+                                             echo "Description for nano command:"
+                                             cat nano.txt
+                                      ;;
+                                      
+                                      "mv")
+                                             echo "----------------------------------------------------------------------------"
+                                             echo "Description for  mv command:"
+                                             cat mv.txt 
+                                      ;;
+                                      
+                                      "ls") 
+                                             echo "----------------------------------------------------------------------------"
+                                             echo "Description for ls command:"
+                                             cat ls.txt 
+                                      ;;
+                                      
+                                      "touch") 
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for touch command:"
+                                               cat touch.txt
+                                      ;;
+                                      
+                                      "mkdir") 
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for  mkdir command:"
+                                               cat mkdir.txt    
+                                      ;;
+                                                  
+                                      "pico") 
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for  pico command:"             
+                                               cat pico.txt
+                                      ;;
+                                        
+                                      "cp")
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for cp command:"
+                                               cat cp.txt
+                                      ;;
+                                      
+                                      "sed") 
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for sed command:"
+                                               cat sed.txt 
+                                      ;;
+                                      
+                                      "grep")
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for grep command:"
+                                               cat grep.txt                   
+                                      ;;
+                                      
+                                      0) 
+                                               break
+                                      ;;
+                                      
+                                      *)  
+                                               echo "commands that have $choice"
+                                               touch sort.txt
+                                               touch sorted.txt 
+                                               for abood in cat nano mv ls touch mkdir pico cp sed grep
+                                               do
+                                                  if [[ "$abood" == *"$choice"* ]]
+                                                  then
+                                                      echo "$abood" >> sort.txt
+                                                  fi
+                                               done
+
+                                               if [ -s sort.txt ]
+                                                  then
+                                                       sort sort.txt >> sorted.txt
+                                                       cat -b sorted.txt
+                                               else    
+                                                   echo "No matching command found have $choice"
+                                                   echo "Do you want to display the suggested command (yes/no)?"
+                                                       read var
+                                                       if [ "$var" == 'yes' ]
+                                                       then
+                                                                                             
+                                                            echo ""
+                                                            echo "cat"
+                                                            echo "cp"
+                                                            echo "grep"
+                                                            echo "ls"
+                                                            echo "mkdir"
+                                                            echo "mv"
+                                                            echo "nano"
+                                                            echo "pico"
+                                                            echo "sed"
+                                                            echo "touch"
+                                                            echo ""
+                                                       fi
+                                               fi
+
+                                               rm sort.txt
+                                               rm sorted.txt
+                                      ;;
+                 esac
+                 done
+                 ;;
+                      
+                 4) 
+                     for abood in cat cp pico nano mkdir grep mv ls touch sed 
+                     do 
+                       cp "$abood".txt "$abood"1.txt
+                     done
+                     echo "please do some changes from here"
+                     while true; do
+                                    echo "Choose from the list to do the operations:"
+                                    echo "1. Verify specific file"
+                                    echo "2. Verify all files"
+                                    echo "3. Exit the verification"
+                                    read choice
+                                    if [ "$choice" == 1 ]; then
+                                    while true; do
+                                                  echo "Please enter the command name to verify the files:"
+                                                  echo "Please enter 0 to go back"
+                                                  read name
+                                                  if [ "$name" == 0 ]; then
+                                                     break
+                                                  fi
+                                                  if [[ " cat cp pico nano mkdir grep mv ls touch sed " == *" $name "* ]]
+                                                  then
+                                                     echo "The differences in the $name file are:"
+                                                     if diff -q "$name.txt" "$name"1.txt
+                                                     then
+                                                              echo "no difference"
+                                                     else
+                                                              diff "$name.txt" "$name"1.txt
+                                                     fi
+   
+                                                     
+                                                  else
+                                                      echo "invalid command name"
+                                                  fi
+                                    done
+                                    elif [ "$choice" == 2 ]; then
+                                    for abood in cat cp pico nano mkdir grep mv ls touch sed 
+                                    do 
+                                      echo "The changes in the $abood file are:"
+                                    if diff -q "$abood".txt "$abood"1.txt
+                                    then
+                                         echo "no difference"
+                                    else
+                                         diff "$abood".txt "$abood"1.txt
+                                    fi
+                                    done
+                                    elif [ "$choice" == 3 ]; then 
+                                         break
+                                    else
+                                        echo "Wrong entry"
+                                    fi
+                     done
+                 ;;
+                 
+                 5) 
+                    echo "The most Commands i use in program "
+                    echo ""
+                    history | cut -d ' ' -f 4- | sort | uniq -c | sort -nr | head -25 | tr -s ' ' | cut -d ' ' -f 3 | uniq
+                    echo ""
+                    while true; do
+                      echo "choice the command to display:"
+                      echo "enter 0 if you want back to meun" 
+
+                      read choice
+                      case $choice in
+                                      "cat") 
+                                             echo "----------------------------------------------------------------------------"
+                                             echo "Description for cat command: "
+                                             cat cat.txt
+                                      ;;
+  
+                                      "nano")  
+                                             echo "----------------------------------------------------------------------------"
+                                             echo "Description for nano command:"
+                                             cat nano.txt
+                                      ;;
+                                      
+                                      "mv")
+                                             echo "----------------------------------------------------------------------------"
+                                             echo "Description for  mv command:"
+                                             cat mv.txt 
+                                      ;;
+                                      
+                                      "ls") 
+                                             echo "----------------------------------------------------------------------------"
+                                             echo "Description for ls command:"
+                                             cat ls.txt 
+                                      ;;
+                                      
+                                      "touch") 
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for touch command:"
+                                               cat touch.txt
+                                      ;;
+                                      
+                                      "mkdir") 
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for  mkdir command:"
+                                               cat mkdir.txt    
+                                      ;;
+                                                  
+                                      "pico") 
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for  pico command:"             
+                                               cat pico.txt
+                                      ;;
+                                        
+                                      "cp")
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for cp command:"
+                                               cat cp.txt
+                                      ;;
+                                      
+                                      "sed") 
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for sed command:"
+                                               cat sed.txt 
+                                      ;;
+                                      
+                                      "grep")
+                                               echo "----------------------------------------------------------------------------"
+                                               echo "Description for grep command:"
+                                               cat grep.txt                   
+                                      ;;
+                                      
+                                      0) 
+                                               break
+                                      ;;
+                                      
+                                      *)  
+                                          echo ""
+                                          echo "command not available $choice"
+                                          echo "The command available to Display cat /cp /nano/pico/grep/mv/mkdir/sed/touch/ls"
+                                      ;;
+                              
+                               esac
+                               done
+                 ;;
+                                          
+                 
+                 6)
+                      break
+                 ;;
+
+                   
+                 *)
+                    echo ""
+                    echo "error choice please enter number between [1-6]"
+                    echo ""
+                 ;;   
+                 
+                 
+                
+                
+                
+  
+     esac
+     done
+  
